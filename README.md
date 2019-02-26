@@ -4,7 +4,7 @@
 
 ## Purpose
 
-> This project was created to keep the boilerplate for a react library project.
+> This project was created to keep react library project easier and updated to new stuff upcoming.
 
 ## Usage
 
@@ -12,4 +12,4 @@
 
 ## License
 
-ISC © [kcsmad](https://github.com/kcsmad)
+ISC © [Kevin  Maduro](https://github.com/kcsmad)
