@@ -1,4 +1,4 @@
-# boilerplate
+# React Library Boilerplate
 
 > This is a react library project boilerplate for easier library project creation
 
