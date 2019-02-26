@@ -1,16 +1,23 @@
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
-import external from 'rollup-plugin-peer-deps-external'
-import postcss from 'rollup-plugin-postcss'
-import resolve from 'rollup-plugin-node-resolve'
-import url from 'rollup-plugin-url'
-import svgr from '@svgr/rollup'
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
+import external from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
+import url from 'rollup-plugin-url';
+import analyze from 'rollup-plugin-analyzer';
+import svgr from '@svgr/rollup';
 
-import pkg from './package.json'
+import pkg from './package.json';
+
+const limitBytes = 1e6;
+const onAnalysis = ({ bundleSize }) => {
+  if (bundleSize < limitBytes) return;
+  console.log(`Bundle size exceeds ${limitBytes} bytes: ${bundleSize} bytes`);
+  return process.exit(1);
+};
 
 export default {
   input: 'src/index.js',
-  external: ['react', 'react-dom', 'scriptjs'],
   output: [
     {
       file: pkg.main,
@@ -55,6 +62,10 @@ export default {
         "@babel/plugin-proposal-class-properties",
       ]
     }),
-    commonjs()
+    commonjs(),
+    analyze({
+      onAnalysis,
+      skipFormatted: true
+    })
   ]
 }
