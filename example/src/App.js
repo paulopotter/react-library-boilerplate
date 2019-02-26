@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { ExampleComponent, Button } from 'boilerplate'
+import { ExampleComponent, Button, AnotherButton } from 'boilerplate'
 
 export default class App extends Component {
   render () {
@@ -8,6 +8,7 @@ export default class App extends Component {
       <div>
         <ExampleComponent text='Modern React component module' />
         <Button />
+        <AnotherButton />
       </div>
     )
   }

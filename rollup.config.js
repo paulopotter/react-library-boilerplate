@@ -10,6 +10,7 @@ import pkg from './package.json'
 
 export default {
   input: 'src/index.js',
+  external: ['react', 'react-dom', 'scriptjs'],
   output: [
     {
       file: pkg.main,
@@ -25,15 +26,33 @@ export default {
   plugins: [
     external(),
     postcss({
-      modules: true
+      minimize: true,
+      sourceMap: true,
+      modules: true,
+      extensions: [ '.css', '.sass', '.scss' ]
     }),
     url(),
     svgr(),
-    babel({
-      exclude: 'node_modules/**',
-      plugins: [ 'external-helpers' ]
+    resolve({
+      extensions: [ '.js', '.jsx' ],
+      jsnext: true,
+      main: true,
+      browser: true
     }),
-    resolve(),
+    babel({
+      babelrc: false,
+      presets: [
+        [
+          "@babel/env",
+          { modules: false }
+        ],
+        "@babel/preset-react"
+      ],
+      runtimeHelpers: true,
+      externalHelpers: true,
+      exclude: 'node_modules/**',
+      plugins: ["@babel/plugin-proposal-class-properties"]
+    }),
     commonjs()
   ]
 }
