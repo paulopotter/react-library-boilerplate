@@ -8,15 +8,22 @@ export default class ExampleComponent extends Component {
     text: PropTypes.string
   };
   
+  arrowFunctionTest = () => (
+    <div>Arrow Function</div>
+  );
+  
   render() {
     const {
       text
     } = this.props;
     
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <>
+        <div className={styles.test}>
+          Example Component: {text}
+        </div>
+        { this.arrowFunctionTest() }
+      </>
     )
   }
 }

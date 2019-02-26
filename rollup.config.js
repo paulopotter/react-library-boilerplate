@@ -51,7 +51,9 @@ export default {
       runtimeHelpers: true,
       externalHelpers: true,
       exclude: 'node_modules/**',
-      plugins: ["@babel/plugin-proposal-class-properties"]
+      plugins: [
+        "@babel/plugin-proposal-class-properties",
+      ]
     }),
     commonjs()
   ]

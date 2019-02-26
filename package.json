@@ -1,10 +1,10 @@
 {
-  "name": "boilerplate",
+  "name": "react-library-boilerplate",
   "version": "1.0.0",
   "description": "This is a react library project boilerplate for easier library project creation",
-  "author": "kcsmad",
+  "author": "Kevin Maduro",
   "license": "MIT",
-  "repository": "kcsmad/boilerplate",
+  "repository": "kcsmad/react-library-boilerplate",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -15,11 +15,11 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
+    "example": "yarn build && cd example && rm -rf node_modules/ && yarn && yarn run start",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
