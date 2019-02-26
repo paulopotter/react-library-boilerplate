@@ -2,30 +2,14 @@
 
 > This is a react library project boilerplate for easier library project creation
 
-[![NPM](https://img.shields.io/npm/v/boilerplate.svg)](https://www.npmjs.com/package/boilerplate) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## Purpose
 
-## Install
-
-```bash
-npm install --save boilerplate
-```
+> This project was created to keep the boilerplate for a react library project.
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'boilerplate'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
+> Feel free to use this project as scaffold for your library project
 
 ## License
 
-MIT © [kcsmad](https://github.com/kcsmad)
+ISC © [kcsmad](https://github.com/kcsmad)

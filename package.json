@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a react library project boilerplate for easier library project creation",
   "author": "Kevin Maduro",
-  "license": "MIT",
+  "license": "ISC",
   "repository": "kcsmad/react-library-boilerplate",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
