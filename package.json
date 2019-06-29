@@ -17,7 +17,8 @@
     "test:watch": "react-scripts test --env=jsdom",
     "example": "yarn build && cd example && rm -rf node_modules/ && yarn && yarn run start",
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "storybook": "start-storybook"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -25,7 +26,7 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.4.5",
     "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
@@ -45,8 +46,10 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^5.1.9",
     "@svgr/rollup": "^2.4.1",
     "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.6",
     "cross-env": "^5.1.4",
     "eslint": "^5.0.1",
     "eslint-config-standard": "^11.0.0",
