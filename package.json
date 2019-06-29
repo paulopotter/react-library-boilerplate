@@ -2,9 +2,14 @@
   "name": "react-library-boilerplate",
   "version": "1.0.0",
   "description": "This is a react library project boilerplate for easier library project creation",
+  "private": true,
   "author": "Kevin Maduro",
+  "contributors": [
+    "Paulo Oliveira (https://umdevqualquer.com.br)"
+  ],
   "license": "ISC",
-  "repository": "kcsmad/react-library-boilerplate",
+  "repository": "github:kcsmad/react-library-boilerplate",
+  "bugs": "https://github.com/kcsmad/react-library-boilerplate/issues",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
